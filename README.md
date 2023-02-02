@@ -2,14 +2,14 @@
   <img src="./.github/logo.png" width="300" alt="Store App" /></a>
 </p>
 
-<!-- <h1 align="center">
+<h1 align="center">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/nlnadialigia/store-app?color=AC42BF&style=plastic">
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/nlnadialigia/store-app?color=AC42BF&style=plastic">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/nlnadialigia/store-app?color=AC42BF">
   <a href="LICENSE">
   <img alt="GitHub" src="https://img.shields.io/github/license/nlnadialigia/store-app?color=AC42BF&logoColor=AC42BF&style=plastic">
   </a>
-</h1> -->
+</h1>
 <br>
 
 ## Sobre
@@ -31,7 +31,7 @@ API Restful inspirada em projetos como Mercado Livre ou Enjoei, onde as pessoas 
 ```bash
 # Clonar o repositório
 
-git clone 
+git clone https://github.com/nlnadialigia/store-app.git
 
 # Acessar a pasta do projeto
 
