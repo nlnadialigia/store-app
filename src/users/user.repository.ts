@@ -1,6 +1,8 @@
+import {Injectable} from "@nestjs/common";
 import {User} from "./user.model";
 
-export class UserRepository {
+@Injectable()
+export class UsersRepository {
   private users = []
 
   async save(user: User) {
