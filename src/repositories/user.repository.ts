@@ -6,4 +6,8 @@ export class UserRepository {
   async save(user: User) {
     this.users.push(user)
   }
+
+  async list() {
+    return this.users
+  }
 }
