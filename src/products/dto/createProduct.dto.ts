@@ -1,7 +1,7 @@
 import {Type} from "class-transformer";
 import {
   ArrayMinSize,
-  IsArray, IsNotEmpty, IsNumber, IsString, IsUrl, MaxLength, Min, ValidateNested
+  IsArray, IsNotEmpty, IsNumber, IsString, IsUrl, IsUUID, MaxLength, Min, ValidateNested
 } from "class-validator";
 
 export class ProductFeatureDTO{ 
@@ -52,8 +52,7 @@ export class CreateProductDTO {
   @ValidateNested()
   @IsArray()
   @Type(() => ProductFeatureDTO)
-  @ArrayMinSize(3,
-    {message: "It must have at least three features"})
+  @ArrayMinSize(3, {message: "It must have at least three features"})
   features: ProductFeatureDTO[]
 
   @ValidateNested()
@@ -65,4 +64,7 @@ export class CreateProductDTO {
   @IsString()
   @IsNotEmpty({message: "Category should be not empty"})
   category: string
+
+  @IsUUID(undefined, {message: "Invalid user id"})
+  userId: string
 }
