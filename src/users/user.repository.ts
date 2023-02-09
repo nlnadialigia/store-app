@@ -5,12 +5,12 @@ import {UserEntity} from "./user.entity";
 export class UserRepository {
   private users: UserEntity[] = []
 
-  private searchById(id: string) {
+  private searchUserById(id: string) {
     const searchUser = this.users.find(
       user => user.id === id
     )
 
-    if (! searchUser) {
+    if (!searchUser) {
       return "User does not exist"
     }
 
@@ -34,7 +34,7 @@ export class UserRepository {
   }
 
   async update(id: string, updateData: Partial<UserEntity>) {
-    const user = this.searchById(id)
+    const user = this.searchUserById(id)
 
     Object.entries(updateData).forEach(([key, value]) => {
       if (key === "id") {
@@ -48,7 +48,7 @@ export class UserRepository {
   }
 
   async remove(id: string) {
-    const user = this.searchById(id)
+    const user = this.searchUserById(id)
     this.users = this.users.filter(
       savedUser => savedUser.id !== id
     )
