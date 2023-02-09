@@ -5,6 +5,18 @@ import {UserEntity} from "./user.entity";
 export class UserRepository {
   private users: UserEntity[] = []
 
+  private searchById(id: string) {
+    const searchUser = this.users.find(
+      user => user.id === id
+    )
+
+    if (! searchUser) {
+      return "User does not exist"
+    }
+
+    return searchUser
+  }
+
   async save(user: UserEntity) {
     this.users.push(user)
   }
@@ -22,22 +34,25 @@ export class UserRepository {
   }
 
   async update(id: string, updateData: Partial<UserEntity>) {
-    const searchUser = this.users.find(
-      user => user.id === id
-    )
-
-    if (! searchUser) {
-      return "User does not exist"
-    }
+    const user = this.searchById(id)
 
     Object.entries(updateData).forEach(([key, value]) => {
       if (key === "id") {
         return
       }
 
-      searchUser[key] = value
+      user[key] = value
     })
 
-    return searchUser
+    return user
+  }
+
+  async remove(id: string) {
+    const user = this.searchById(id)
+    this.users = this.users.filter(
+      savedUser => savedUser.id !== id
+    )
+
+    return user
   }
 }
