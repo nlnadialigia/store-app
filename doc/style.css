@@ -1,0 +1,139 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.task {
+  font-family: Open Sans, sans-serif;
+}
+
+body {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+body,
+input,
+select,
+textarea {
+  font: normal 14px Lato, Arial, sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  font-family: Lato, Arial, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.formattedText {
+  color: #444c4e;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.task-body-main .formattedText:not(.markdownEditor-help) {
+  font-family: "Source Serif Pro", serif;
+  color: #3d464d;
+  margin: 0;
+  line-height: 31.5px;
+}
+
+.task-body-main .formattedText {
+  font-size: 1.3em;
+}
+
+.task-body-main .formattedText p {
+  text-align: left;
+}
+
+.formattedText p:not(:first-child),
+.task-body-main .formattedText p {
+  text-align: left;
+}
+
+.formattedText .prettyprint,
+.formattedText ol,
+.formattedText p:not(:first-child),
+.formattedText ul {
+  margin: 1.5em 0;
+}
+
+.prettyprint {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+  background: #f5f2f0;
+}
+
+.prettyprint>.hljs,
+.task-body-main .prettyprint,
+.task-body-main :not(.prettyprint)>code {
+  background: #f0f3f5;
+  color: #3d464d;
+}
+
+.formattedText .prettyprint,
+.formattedText ol,
+.formattedText p:not(:first-child),
+.formattedText ul {
+  margin: 1.5em 0;
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  color: #005cc5;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  color: #d73a49;
+}
+
+.clipit {
+  display: block;
+  float: right;
+  margin-top: 10px;
+  padding: .5rem 1rem;
+  border: 3px solid #32a7e5;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #32a7e5;
+}
+
+@media (min-width: 800px) {
+  .formattedText-mainTitle {
+    margin: 2%;
+  }
+  
+  .formattedText {
+    margin: 2%;
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 600px) {
+  .formattedText {
+    font-size: 16px;
+  }
+  
+  .task-body-main .formattedText:not(.markdownEditor-help) {
+    width: 90%;
+  }
+}
